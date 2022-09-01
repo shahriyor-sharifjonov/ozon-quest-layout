@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Inter', sans-serif;
+}
+*:focus,
+*:active{
+    outline: none;
+}
+a{
+    color: inherit;
+}
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 375px;
+    width: 100%;
+    height: 812px;
+    padding: 20px;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 38px;
+    padding-bottom: 40px;
+}
+.question{
+    height: 150px;
+    padding-bottom: 10px;
+}
+.question p{
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+    color: #002343;    
+}
+.question h1{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 43px;
+    text-align: center;
+    color: #002343;   
+}
+.content{
+    height: 433px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.variant{
+    display: flex;
+    align-items: center;
+    position: relative;
+    isolation: isolate;
+}
+.variant span{
+    min-width: 35px;
+}
+.variant:not(:last-of-type){
+    margin-bottom: 16px;
+}
+.variant_small{
+    justify-content: flex-start;
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #002343;
+    cursor: pointer;
+}
+.variant_small input:checked~.variant__bg{
+    background: #00D1AA;
+    border-color: #00D1AA;
+}
+.variant_small input:checked~span{
+    color: #fff;
+}
+.variant_small input:checked~.variant__num svg{
+    display: block;
+}
+.variant_small input:checked~.variant__num span{
+    display: none;
+}
+.variant_small .variant__bg{
+    background: #F4F3F6;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+.variant_small .variant__num svg{
+    display: none;
+}
+.variant__bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.variant input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    cursor: pointer;
+}
+.variant__num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: #002343;
+    margin-right: 16px;
+}
+.variant__num span{
+    min-width: 0;
+}
+.variant_big{
+    height: 134px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.variant_big .variant_bg{
+    height: 134px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.variant_big input:checked~.variant__bg{
+    background: #00D1AA;
+    border-color: #00D1AA;
+}
+.variant_big .variant__bg{
+    background: rgba(0, 35, 67, 0.8);
+    border-color: rgba(0, 35, 67, 0.8);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+}
+.btn{
+    cursor: pointer;
+    position: relative;
+}
+.btn_small{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+}
+.btn_gray{
+    background: #F4F3F6;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #002343;
+}
+.btn_blue{
+    background: #0069FF;
+    color: #fff;
+}
+.btn_big{
+    flex: 1 1 auto;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    text-decoration: none;
+    border-radius: 30px;
+}
+.btn_big svg{
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    transform: translateY(-50%);
+}
+.progress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #757575;
+}
+.progress-bar{
+    position: relative;
+    flex: 1 1 auto;
+    width: 100%;
+    height: 12px;
+    border-radius: 16px;
+    background: #F4F3F6;
+    margin-right: 12px;
+}
+.progress-bar__track{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #0069FF;
+    border-radius: 16px;
+}
+.form{
+    max-width: 294px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.form__content{
+    padding-top: 15px;
+    width: 100%;
+}
+.form__p{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #6B757C;
+    margin-bottom: 27px;
+}
+.form__group{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.form__group.mb-0{
+    margin-bottom: 0;
+}
+.form__label{
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    color: #94A2AF; 
+    display: block;   
+}
+.form__group input{
+    width: 100%;
+    background: #F4F3F6;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    height: 60px;
+    padding-left: 56px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #002343;    
+}
+.form__input_tel{
+    position: relative;
+}
+.form__input_tel svg{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 16px;
+}
+.form__row{
+    display: flex;
+    justify-content: space-between;
+}
+.form__row .form__group{
+    width: calc(50% - 8px);
+}
+.form__group select{
+    width: 100%;
+    background: #FFFFFF;
+    height: 54px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #111827;
+}
+.form__group option{
+    font-size: 14px;
+}
