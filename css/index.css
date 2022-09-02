@@ -1,18 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     font-family: 'Inter', sans-serif;
 }
+
 *:focus,
-*:active{
+*:active {
     outline: none;
 }
-a{
+
+a {
     color: inherit;
 }
-.container{
+
+.container {
     margin-left: auto;
     margin-right: auto;
     max-width: 375px;
@@ -20,49 +23,58 @@ a{
     height: 812px;
     padding: 20px;
 }
-.header{
+
+.header {
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 38px;
     padding-bottom: 40px;
 }
-.question{
+
+.question {
     height: 150px;
     padding-bottom: 10px;
 }
-.question p{
+
+.question p {
     font-weight: 700;
     font-size: 22px;
     line-height: 30px;
-    color: #002343;    
+    color: #002343;
 }
-.question h1{
+
+.question h1 {
     font-weight: 700;
     font-size: 40px;
     line-height: 43px;
     text-align: center;
-    color: #002343;   
+    color: #002343;
 }
-.content{
+
+.content {
     height: 433px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.variant{
+
+.variant {
     display: flex;
     align-items: center;
     position: relative;
     isolation: isolate;
 }
-.variant span{
+
+.variant span {
     min-width: 35px;
 }
-.variant:not(:last-of-type){
+
+.variant:not(:last-of-type) {
     margin-bottom: 16px;
 }
-.variant_small{
+
+.variant_small {
     justify-content: flex-start;
     padding: 12px 16px;
     font-weight: 700;
@@ -72,29 +84,42 @@ a{
     color: #002343;
     cursor: pointer;
 }
-.variant_small input:checked~.variant__bg{
+
+.variant_small .variant__num>span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.variant_small input:checked~.variant__bg {
     background: #00D1AA;
     border-color: #00D1AA;
 }
-.variant_small input:checked~span{
+
+.variant_small input:checked~span {
     color: #fff;
 }
-.variant_small input:checked~.variant__num svg{
+
+.variant_small input:checked~.variant__num>svg {
     display: block;
 }
-.variant_small input:checked~.variant__num span{
+
+.variant_small input:checked~.variant__num span {
     display: none;
 }
-.variant_small .variant__bg{
+
+.variant_small .variant__bg {
     background: #F4F3F6;
     border: 1px solid #E1E1E1;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
 }
-.variant_small .variant__num svg{
+
+.variant_small .variant__num>svg {
     display: none;
 }
-.variant__bg{
+
+.variant__bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -102,7 +127,8 @@ a{
     height: 100%;
     z-index: -1;
 }
-.variant input{
+
+.variant input {
     position: absolute;
     top: 0;
     left: 0;
@@ -112,7 +138,8 @@ a{
     opacity: 0;
     cursor: pointer;
 }
-.variant__num{
+
+.variant__num {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,10 +153,12 @@ a{
     color: #002343;
     margin-right: 16px;
 }
-.variant__num span{
+
+.variant__num span {
     min-width: 0;
 }
-.variant_big{
+
+.variant_big {
     height: 134px;
     display: flex;
     align-items: center;
@@ -142,29 +171,36 @@ a{
     border-radius: 8px;
     overflow: hidden;
 }
-.variant_big .variant_bg{
+
+.variant_big .variant_bg {
     height: 134px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.variant_big input:checked~.variant__bg{
+
+.variant_big input:checked~.variant__bg {
     background: #00D1AA;
     border-color: #00D1AA;
 }
-.variant_big .variant__bg{
+
+.variant_big .variant__bg {
     background: rgba(0, 35, 67, 0.8);
     border-color: rgba(0, 35, 67, 0.8);
 }
-.footer{
+
+.footer {
     display: flex;
     justify-content: space-between;
 }
-.btn{
+
+.btn {
     cursor: pointer;
     position: relative;
+    border: none;
 }
-.btn_small{
+
+.btn_small {
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -173,7 +209,8 @@ a{
     align-items: center;
     margin-right: 13px;
 }
-.btn_gray{
+
+.btn_gray {
     background: #F4F3F6;
     border: 1px solid #E1E1E1;
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
@@ -182,11 +219,17 @@ a{
     line-height: 20px;
     color: #002343;
 }
-.btn_blue{
+
+.btn_blue {
     background: #0069FF;
     color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
 }
-.btn_big{
+
+.btn_big {
     flex: 1 1 auto;
     height: 60px;
     display: flex;
@@ -195,14 +238,17 @@ a{
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
     text-decoration: none;
     border-radius: 30px;
+    font-weight: 700;
 }
-.btn_big svg{
+
+.btn_big svg {
     position: absolute;
     top: 50%;
     left: 18px;
     transform: translateY(-50%);
 }
-.progress{
+
+.progress {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -212,7 +258,8 @@ a{
     line-height: 20px;
     color: #757575;
 }
-.progress-bar{
+
+.progress-bar {
     position: relative;
     flex: 1 1 auto;
     width: 100%;
@@ -221,7 +268,8 @@ a{
     background: #F4F3F6;
     margin-right: 12px;
 }
-.progress-bar__track{
+
+.progress-bar__track {
     position: absolute;
     top: 0;
     left: 0;
@@ -229,40 +277,47 @@ a{
     background: #0069FF;
     border-radius: 16px;
 }
-.form{
+
+.form {
     max-width: 294px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
-.form__content{
+
+.form__content {
     padding-top: 15px;
     width: 100%;
 }
-.form__p{
+
+.form__p {
     font-weight: 600;
     font-size: 20px;
     line-height: 30px;
     color: #6B757C;
     margin-bottom: 27px;
 }
-.form__group{
+
+.form__group {
     width: 100%;
     margin-bottom: 30px;
 }
-.form__group.mb-0{
+
+.form__group.mb-0 {
     margin-bottom: 0;
 }
-.form__label{
+
+.form__label {
     margin-bottom: 5px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     text-align: left;
-    color: #94A2AF; 
-    display: block;   
+    color: #94A2AF;
+    display: block;
 }
-.form__group input{
+
+.form__group input {
     width: 100%;
     background: #F4F3F6;
     border: 1px solid #E1E1E1;
@@ -273,25 +328,30 @@ a{
     font-weight: 500;
     font-size: 20px;
     line-height: 30px;
-    color: #002343;    
+    color: #002343;
 }
-.form__input_tel{
+
+.form__input_tel {
     position: relative;
 }
-.form__input_tel svg{
+
+.form__input_tel svg {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     margin-left: 16px;
 }
-.form__row{
+
+.form__row {
     display: flex;
     justify-content: space-between;
 }
-.form__row .form__group{
+
+.form__row .form__group {
     width: calc(50% - 8px);
 }
-.form__group select{
+
+.form__group select {
     width: 100%;
     background: #FFFFFF;
     height: 54px;
@@ -305,6 +365,91 @@ a{
     text-align: center;
     color: #111827;
 }
-.form__group option{
+
+.form__group option {
     font-size: 14px;
+}
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.custom-select select {
+    display: none;
+    /*hide original SELECT element: */
+}
+
+.select-selected {
+    background: #FFFFFF;
+    border: 1px solid #D1D5DB;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #111827;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 24px;
+    right: 18px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #94A2AF transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent #94A2AF transparent;
+    top: 17px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #111827;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.select-items div{
+    font-size: 18px;
+}
+
+/* Style items (options): */
+.select-items {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #D1D5DB;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    overflow-y: auto;
+    max-height: 300px;
+    border-radius: 6px;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }
